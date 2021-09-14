@@ -1,0 +1,47 @@
+<!-- 
+<div id="divWeatherMain"> 
+    <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+    </div>   
+    <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+    </div>   
+    <div class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud"></i>
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData.temp_celcius}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}}</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+</div> -->
+<div class="weather-body">
+<section class="top-banner">
+    <div class="container">
+      <h1 class="heading"> Weather Page</h1>
+      <!-- <form>
+        <input type="text" placeholder="Search for a city" autofocus="">
+        <button type="submit">SUBMIT</button>
+        <span class="msg"></span>
+      </form> -->
+    </div>
+  </section>
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities"><li class="city">
+          <h2 class="city-name" data-name="Mumbai,IN">
+            <span>{{WeatherData.name}}</span>
+            <sup>{{WeatherData.cf}}</sup>
+          </h2>
+          <div class="city-temp">{{WeatherData.temp_celcius}}°<sup>C</sup></div>
+          <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+          <figure>
+            <img class="city-icon" src={{WeatherData.icon}} alt={{WeatherData.desc}}>
+            <figcaption>{{WeatherData.desc}}</figcaption>
+          </figure>
+          <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{WeatherData.main.humidity}}%</div>
+        </li></ul>
+    </div>
+  </section>
+</div>
